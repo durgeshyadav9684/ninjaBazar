@@ -1,0 +1,102 @@
+.section {
+  padding: 4rem 0;
+  background-color: var(--background);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.viewAll {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.dealCard {
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+  color: white;
+}
+
+.dealCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dealInfo {
+  position: relative;
+  z-index: 2;
+}
+
+.dealCategory {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dealDiscount {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.dealImage {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageIcon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.card1 { background-color: #2e7d32; } /* Green */
+.card2 { background-color: #e65100; } /* Orange */
+.card3 { background-color: #f57f17; } /* Yellow-Orange */
+.card4 { background-color: #0277bd; } /* Blue */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
