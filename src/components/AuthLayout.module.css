@@ -1,0 +1,76 @@
+.authContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--surface);
+}
+
+.leftPane {
+  flex: 1;
+  background-color: #007451;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+@media (max-width: 900px) {
+  .leftPane {
+    display: none;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.logoIcon {
+  background-color: white;
+  color: #007451;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.image {
+  object-fit: contain;
+}
+
+.rightPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--surface);
+}

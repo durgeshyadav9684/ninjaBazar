@@ -8,6 +8,7 @@ interface Product {
   title: string;
   price: string;
   minOrder: string;
+  image?: string;
 }
 
 interface ProductListProps {
@@ -32,8 +33,11 @@ const ProductList: React.FC<ProductListProps> = ({ title, products }) => {
               <button className={styles.cartBtn} aria-label="Add to cart">
                 <ShoppingCart size={16} />
               </button>
-              {/* Placeholder for product image */}
-              <span style={{ color: '#9ca3af' }}>Image</span>
+              {product.image ? (
+                <img src={product.image} alt={product.title} className={styles.productImg} />
+              ) : (
+                <span style={{ color: '#9ca3af' }}>Image</span>
+              )}
             </div>
             <h3 className={styles.productTitle}>{product.title}</h3>
             <div className={styles.price}>{product.price}</div>
